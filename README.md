@@ -1,4 +1,4 @@
-# 🌴 Vacation Deals Management
+# 🌴 Vacations Management
 
 ## Introduction
 
