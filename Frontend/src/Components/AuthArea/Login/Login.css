@@ -1,0 +1,47 @@
+.login-container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ padding: 20px;
+}
+
+.login-wallpaper {
+ background-image: url("../../../Assets/Images/LoginWallpaper.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.50);
+ transition: transform 0.3s, border 0.3s;
+}
+
+.login-container>.css-2s90m6-MuiAvatar-root {
+ margin: 8px;
+ background-color: #333;
+ color: white;
+
+}
+
+.login-form {
+ width: 100%;
+}
+
+.login-title {
+ margin-bottom: 3px;
+}
+
+.login-form>.login-button {
+ margin-bottom: 2px;
+ background-color: #333;
+ color: white;
+}
+
+.login-form>.login-button:hover {
+ background-color: #555;
+ color: white;
+}
+
+.register-link {
+ text-decoration: none;
+ color: #1976d2;
+}

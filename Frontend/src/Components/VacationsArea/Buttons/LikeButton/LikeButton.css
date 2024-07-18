@@ -1,0 +1,14 @@
+.LikeOverlay {
+ width: 55px;
+ height: 40px;
+ position: absolute;
+ top: 5px;
+ right: 10px;
+ z-index: 1;
+ background-color: rgba(255, 255, 255, 0.5);
+ border-radius: 50%;
+}
+
+.LikeOverlay:hover {
+ background-color: rgba(255, 255, 255, 0.8);
+}

@@ -1,0 +1,28 @@
+.textarea-container {
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ padding: 6px;
+}
+
+.textarea {
+ min-height: 110px;
+ max-height: 180px;
+ overflow-y: auto;
+}
+
+.textarea::-webkit-scrollbar {
+ width: 12px;
+}
+
+.textarea::-webkit-scrollbar-track {
+ background: #f1f1f1;
+}
+
+.textarea::-webkit-scrollbar-thumb {
+ background: #888;
+ border-radius: 8px;
+}
+
+.textarea::-webkit-scrollbar-thumb:hover {
+ background: #555;
+}

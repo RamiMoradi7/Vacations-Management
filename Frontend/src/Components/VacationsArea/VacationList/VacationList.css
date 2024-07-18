@@ -1,0 +1,69 @@
+.VacationList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Cards {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.NoResults {
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.AdminLinks {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.AdminLinks .nav-link {
+  margin-right: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.AdminLinks .nav-link:hover {
+  color: #0056b3;
+}
+
+.AdminLinks .nav-link:hover {
+  text-decoration: underline;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.loader-image {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

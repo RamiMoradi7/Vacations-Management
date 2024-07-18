@@ -1,0 +1,21 @@
+# Node.js
+/Backend/node_modules/
+/Frontend/node_modules/
+
+# Environment variables
+.env
+
+# Logs
+errors.log
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Build files
+/Frontend/build
+/Frontend/dist
+
+
+# Miscellaneous
+*.log
+*.lock

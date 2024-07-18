@@ -1,0 +1,20 @@
+.AuthMenu {
+ display: flex;
+ align-items: center;
+ font-size: 18px;
+}
+
+.NavLink {
+ color: white;
+ text-decoration: none;
+ margin-left: 10px;
+ cursor: pointer;
+}
+
+.NavLink:hover {
+ text-decoration: underline;
+}
+
+.AuthMenu span {
+ margin-right: 10px;
+}

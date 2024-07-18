@@ -1,0 +1,61 @@
+.FormContainer {
+ max-width: 400px;
+ margin: 0 auto;
+}
+
+.FormControl {
+ padding: 20px;
+ border: 1px solid #ccc;
+ border-radius: 5px;
+ background-color: #f9f9f9;
+}
+
+.FormControl label {
+ display: block;
+ margin-bottom: 10px;
+ font-weight: bold;
+}
+
+.FormControl input[type="text"],
+.FormControl textarea,
+.FormControl input[type="date"],
+.FormControl input[type="number"],
+.FormControl button[type="submit"] {
+ width: 100%;
+ padding: 10px;
+ margin-bottom: 15px;
+ border: 1px solid #ccc;
+ border-radius: 5px;
+ box-sizing: border-box;
+}
+
+.FormControl button[type="submit"] {
+ background-color: #4caf50;
+ color: white;
+ font-size: 16px;
+ font-weight: bold;
+ border: none;
+ cursor: pointer;
+}
+
+.FormControl button[type="submit"]:hover {
+ background-color: #45a049;
+}
+
+
+.FormControl .ImageContainer {
+ margin-bottom: 15px;
+ text-align: center;
+}
+
+.FormControl .ImageContainer img {
+ max-width: 100%;
+ height: auto;
+ border-radius: 5px;
+ box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+ transition: transform 0.3s ease-in-out;
+}
+
+.FormControl .ImageContainer img:hover {
+ transform: scale(1.05);
+}

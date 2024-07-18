@@ -1,0 +1,57 @@
+# docker-compose version: 
+version: '3.8'
+
+
+services:
+
+  # 1. Database service: 
+  mysql-service:
+    image: ramimoradi7/vacations-mysql:1.3
+    build: ./Database
+    container_name: vacations-mysql
+    restart: unless-stopped
+    # Volumes:
+    volumes:
+      - vacations-volume:/var/lib/mysql
+    environment:
+      MYSQL_HOST: localhost 
+      MYSQL_USER: Alice
+      MYSQL_PASSWORD: Wonderland
+      MYSQL_DATABASE: vacations
+      MYSQL_ROOT_PASSWORD: Wonderland 
+
+  # ----------------------------------------------------
+  # 2. API Service:
+  api-service:
+
+    depends_on:
+      - mysql-service
+    image: ramimoradi7/vacations-api:1.3
+    build: ./Backend
+    container_name: vacations-api
+
+    ports:
+      - 4000:4000
+    restart: unless-stopped
+    environment:
+      MYSQL_HOST: mysql-service
+      MYSQL_USER: Alice
+      MYSQL_PASSWORD: Wonderland
+      MYSQL_DATABASE: vacations
+
+  # ----------------------------------------------------
+  # 3. Frontend (react):
+  frontend-service:
+    depends_on:
+      - api-service
+    image: ramimoradi7/vacations-frontend:1.3
+    build: ./Frontend
+    container_name: vacations-frontend
+    ports:
+      - 3000:3000
+    restart: unless-stopped
+
+# ----------------------------------------------------
+
+volumes:
+  vacations-volume:

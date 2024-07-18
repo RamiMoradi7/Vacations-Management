@@ -1,0 +1,94 @@
+.CardContainer {
+ display: flex;
+ justify-content: center;
+ margin: 5px;
+ padding: 8px;
+}
+
+.VacationCard {
+ width: 360px;
+ height: 590px;
+ border-radius: 20px;
+ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.50);
+ transition: transform 0.3s, border 0.3s;
+ overflow: hidden;
+ position: relative;
+}
+
+.VacationCard.ImageContainer {
+ border-top-left-radius: 10px;
+ border-top-right-radius: 10px;
+ overflow: hidden;
+}
+
+.ImageContainer img {
+ width: 100%;
+ height: 250px;
+ object-fit: cover;
+}
+
+
+.DescriptionContainer {
+ padding: 20px;
+ visibility: hidden;
+ opacity: 0;
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ background-color: rgba(255, 255, 255, 0.9);
+ transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+ z-index: 2;
+ max-height: 0;
+ overflow-y: auto;
+ box-sizing: border-box;
+ border-radius: 0 0 10px 10px;
+}
+
+.Description {
+ background-color: rgba(255, 255, 255, 0.1);
+ border-radius: 8px;
+ padding: 10px;
+ box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+ transition: opacity 0.3s, visibility 0.3s;
+
+}
+
+.VacationCard:hover .DescriptionContainer {
+ visibility: visible;
+ opacity: 1;
+ max-height: 100%;
+
+}
+
+.DescriptionContainer .MuiTypography-root {
+ overflow: hidden;
+ text-overflow: ellipsis;
+ display: -webkit-box;
+ -webkit-line-clamp: 5;
+ -webkit-box-orient: vertical;
+}
+
+.DescriptionContainer:hover .MuiTypography-root {
+ overflow: visible;
+}
+
+.DescriptionContainer::-webkit-scrollbar {
+ width: 7px;
+}
+
+.DescriptionContainer::-webkit-scrollbar-track {
+ background: rgba(0, 0, 0, 0.1);
+}
+
+.DescriptionContainer::-webkit-scrollbar-thumb {
+ background: #333;
+ border-radius: 10px;
+}
+
+.DescriptionContainer::-webkit-scrollbar-thumb:hover {
+ background: #555;
+}
+
+.randomNumberRed b {
+ color: rgb(255, 77, 77);
+}
